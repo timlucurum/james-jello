@@ -10,7 +10,9 @@ def ok():
 @application.route("/")
 def hello():
     try:
-            data = requests.get('http://crisis-melba:8080').text()
+            response = requests.get('http://crisis-melba:8080')
+            print(response)
+            data = response.text()
     except:
             data = '<no data>'
     return "James Jello: data = " + data
