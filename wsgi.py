@@ -3,6 +3,10 @@ import requests
 
 application = Flask(__name__)
 
+@application.route("/ok")
+def ok():
+    return "OK"
+
 @application.route("/")
 def hello():
     try:
