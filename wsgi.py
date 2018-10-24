@@ -11,8 +11,7 @@ def ok():
 def hello():
     try:
             response = requests.get('http://crisis-melba:8080')
-            print(response)
-            data = response.text()
+            data = response.text
     except:
             data = '<no data>'
     return "James Jello: data = " + data
