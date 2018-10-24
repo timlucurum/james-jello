@@ -9,7 +9,7 @@ def hello():
             data = requests.get('http://crisis-melba:8080').text()
     except:
             data = '<no data>'
-    return "James Jello: data = " + data.text()
+    return "James Jello: data = " + data
 
 if __name__ == "__main__":
     application.run()
