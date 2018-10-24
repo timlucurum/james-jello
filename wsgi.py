@@ -1,15 +1,15 @@
 from flask import Flask
-import socket
+import requests
 
 application = Flask(__name__)
 
 @application.route("/")
 def hello():
     try:
-            ip = socket.gethostbyname('crisis-melba')
+            data = requests.get('http://crisis-melba:8080')
     except:
-            ip = '<no ip>'
-    return "James Jello: gethostbyname = " + ip
+            data = '<no data>'
+    return "James Jello: data = " + data
 
 if __name__ == "__main__":
     application.run()
