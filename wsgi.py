@@ -6,7 +6,7 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
     try:
-            ip = socket.gethostbyname('bbc.com')
+            ip = socket.gethostbyname('crisis-melba')
     except:
             ip = '<no ip>'
     return "James Jello: gethostbyname = " + ip
